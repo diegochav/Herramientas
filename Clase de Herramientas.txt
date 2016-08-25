@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 test
+=======
+Que tal?
+Diego Chavarro Sanchez
+U Sergio Arboleda
+>>>>>>> ee617f23493873048b97bc718b5596eb7f79e520
