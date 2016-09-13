@@ -7,8 +7,17 @@ for (a=0;a<10,a++){
 	scanf("%d",&b);
 		if (b>=0){
 		pos=pos+1;
-			if(a%2==0){
-				par
+			if(b%2==0){
+				par=par+1;
+				}
+			else {
+				imp=imp+1;
+			}
+		else {
+		neg=neg+1;
+		}	
+}
+printf("\nLos numeros positivos son: %d\n",pos);
 
 
 
