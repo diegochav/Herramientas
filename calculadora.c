@@ -4,7 +4,7 @@ int suma(int a, int b);
 int resta(int a, int b);
 int multiplicacion(int a, int b);
 int potencia(int a, int b);
-//int factorial(int a);
+int factorial(int a);
 
 int main(){
 	int numero1, numero2, operacion,resultado;
@@ -44,12 +44,12 @@ int main(){
 			resultado=potencia(numero1, numero2);
 			printf("El resultado es: %d\n", resultado);
 			break;
-		//case 5:
-		//	printf("Escriba un numero:\n");
-		//	scanf("%d",&numero1);
-		//	resultado=factorial(numero1);
-		//	printf("El resultado es: %d\n", resultado);
-		//	break;
+		case 5:
+			printf("Escriba un numero:\n");
+			scanf("%d",&numero1);
+			resultado=factorial(numero1);
+			printf("El resultado es: %d\n", resultado);
+			break;
 
 
 
@@ -89,5 +89,25 @@ int potencia(int numero1, int numero2){
 		}
 	}
 	return a;
+}
+int factorial(int numero1){
+while(1){
+	int a=numero1;
+
+	for(int i=1;i<(numero1-1);i++){
+		a=numero1+a;
+	}
+
+	int b=a;
+	for(int i=2;i<(numero1-1);i++){
+		b=a+b;
+	}
+	int c=b;
+	for(int i=numero1;i<(numero1+1);i++){
+		c=b+c;
+	}
+
+	return a;
+}
 }
 
