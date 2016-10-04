@@ -9,7 +9,7 @@ int factorial(int a);
 int main(){
 	int numero1, numero2, operacion,resultado;
 	while(1){
-	printf("CALCULADORA\n 1:Suma\n 2:Resta\n 3:Multiplicacion\n 4:Potencia\n 5:Factorial\n 6:Salir\n Escriba el numero de la operacion a realizar: ");
+	printf("\n\n\nCALCULADORA\n 1:Suma\n 2:Resta\n 3:Multiplicacion\n 4:Potencia\n 5:Factorial\n 6:Salir\n Escriba el numero de la operacion a realizar: ");
 	scanf("%d",&operacion);
 	switch (operacion){
 		case 1:
@@ -51,11 +51,6 @@ int main(){
 			printf("El resultado es: %d\n", resultado);
 			break;
 
-
-
-
-
-
 		case 6:
 			printf("Ha salido de la calculadora\n");
 			return 0;
@@ -91,23 +86,23 @@ int potencia(int numero1, int numero2){
 	return a;
 }
 int factorial(int numero1){
-while(1){
-	int a=numero1;
 
-	for(int i=1;i<(numero1-1);i++){
-		a=numero1+a;
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	if(numero1>0){
+		a = numero1 - 1;
+		c = numero1;
+		for(int i=1;i<numero1;i++){
+			b=0;
+			for(int i=1;i<a;i++){
+				b = b + c;
+			}
+		c = c + b;
+		a = a - 1;
+		}
 	}
+	return c;
 
-	int b=a;
-	for(int i=2;i<(numero1-1);i++){
-		b=a+b;
-	}
-	int c=b;
-	for(int i=numero1;i<(numero1+1);i++){
-		c=b+c;
-	}
-
-	return a;
-}
 }
 
