@@ -68,25 +68,44 @@ def on_butonpuntoclick():
 pass
 
 def on_butondivclick():
-	texto=label2text.get()
-	label2text.set(texto+"%")
+	texto=label4text.get()
+	label4text.set("%")
 
 pass
 def on_butonmultclick():
-	texto=label2text.get()
-	label2text.set(texto+"*")
+	texto=label4text.get()
+	label4text.set("*")
 
 pass
 def on_butonresclick():
-	texto=label2text.get()
-	label2text.set(texto+"-")
+	texto=label4text.get()
+	label4text.set("-")
 
 pass
 def on_butonmasclick():
-	texto=label2text.get()
-	label2text.set(texto+"+")
+	texto=label4text.get()
+	label4text.set("+")
 
 pass
+
+def on_butonceclick():
+	texto=label2text.get()
+	label2text.set("Numero 1")
+
+pass
+
+def on_butonigualclick():
+	texto=label2text.get()
+	label2text.set(resultado)
+
+pass
+
+def operacion():
+
+	valor=label4text.get()
+	if(valor == on_butondivclick):
+		resultado = texto + texto
+
 
 
 
@@ -120,6 +139,8 @@ label3.configure(textvar=label3text)
 
 label1=ttk.Label(win,text="Resultado")
 label1.grid(row=2,column=5)
+label1text=tk.StringVar()
+label1.configure(textvar=label1text)
 
 
 
@@ -157,36 +178,23 @@ boton3.grid(row=6,column=5)
 botonpunto=ttk.Button(win,text=".",comman=on_buton7click)
 botonpunto.grid(row=7,column=5)
 
-botondiv=ttk.Button(win,text="%",comman=on_buton7click)
+botondiv=ttk.Button(win,text="%",comman=on_butondivclick)
 botondiv.grid(row=4,column=6)
 
-botonmult=ttk.Button(win,text="*",comman=on_buton7click)
+botonmult=ttk.Button(win,text="*",comman=on_butonmultclick)
 botonmult.grid(row=5,column=6)
 
-boton10=ttk.Button(win,text="-",comman=on_buton7click)
+boton10=ttk.Button(win,text="-",comman=on_butonresclick)
 boton10.grid(row=6,column=6)
 
-boton10=ttk.Button(win,text="+",comman=on_buton7click)
+boton10=ttk.Button(win,text="+",comman=on_butonmasclick)
 boton10.grid(row=7,column=6)
 
-boton10=ttk.Button(win,text="CE",comman=on_buton7click)
+boton10=ttk.Button(win,text="CE",comman=on_butonceclick)
 boton10.grid(row=4,column=7)
 
-boton10=ttk.Button(win,text="=",comman=on_buton7click)
+boton10=ttk.Button(win,text="=",comman=on_butonigualclick)
 boton10.grid(row=5,column=7)
-
-
-#numero1=tk.StringVar()
-#txtentry=ttk.Entry(win,textvariable=numero1,width=10)
-#txtentry.grid(row=1,column=3)
-
-#numero2=tk.StringVar()
-#txtentry=ttk.Entry(win,textvariable=numero2,width=10)
-#txtentry.grid(row=1,column=5)
-
-#resultado=tk.StringVar()
-#txtentry=ttk.Entry(win,textvariable=resultado,width=10)
-#txtentry.grid(row=2,column=4)
 
 
 win.mainloop()
