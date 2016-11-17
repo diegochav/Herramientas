@@ -10,7 +10,7 @@ pinMode(6,OUTPUT);
 
 void loop() {
   int val = analogRead(analog_pin);
-  Serial.println(val);
+  //Serial.println(val);
   digitalWrite(2,LOW);
   digitalWrite(3,LOW);
   digitalWrite(4,LOW);
